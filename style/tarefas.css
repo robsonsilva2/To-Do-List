@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('/lista_tarefas/images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+}
+
+.form {
+    background-color: #0099ff;
+    padding: 25px;
+    width: 550px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.descricao form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.descricao input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+}
+
+.descricao button {
+    background-color: white;
+    color: #0099ff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.boasvindas button {
+    background-color: black;
+}
+.descricao button:hover {
+    background-color: #e6e6e6;
+}
+
+.tarefas ul {
+    list-style: none;
+}
+
+.tarefas li {
+    background-color: rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tarefas li s {
+    opacity: 0.6;
+}
+
+/* LINKS DE AÇÃO */
+.tarefas a {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+.boavindas a {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+.logout {
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.logout a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Concluir = Verde */
+.tarefas a[href*="concluida"] {
+    background-color: green;
+}
+
+/* Editar = Laranja */
+.tarefas a[href*="editar"] {
+    background-color: #ff9900;
+}
+
+/* Excluir = Vermelho */
+.tarefas a[href*="excluir"] {
+    background-color: #dc3545;
+}
+
+.tarefas a:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .descricao form {
+        flex-direction: column;
+    }
+
+    .descricao button {
+        width: 100%;
+    }
+
+    .tarefas li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tarefas a {
+        margin: 5px 0 0 0;
+    }
+}
+
+.boasvindas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    max-height: 30px;
+}
+
